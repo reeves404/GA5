@@ -189,11 +189,11 @@ and why you think these lengths are the most common: 1-3 mainly 1. Sort of surpr
 ### 17: Claude's review of your protocol and scripts
 
 *Answer*: At least three of Claude's suggestions,
-and whether you agree or disagree with each one, and why:
+and whether you agree or disagree with each one, and why: 1. correct the setup code which i agree with for replicability. 2. describe the placeholders which i also agree with. so having someone know where everything came from and having an abosolute path. 3 document the job orders , so talk about the initial failed and corrections which i probably agree with. 
 
 ### 18: Address a suggestion
 
-*Answer*: Which suggestion(s) you addressed, and what you changed:
+*Answer*: Which suggestion(s) you addressed, and what you changed: i addressed the first suggestion so i added into the protocol md and added mkdir -p data/ref so that creates a folder before wget tried to save the reference file there 
 
 ------------------------------------------------------------------------
 

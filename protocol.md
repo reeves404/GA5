@@ -1,11 +1,11 @@
 # RNA-seq analysis of _Culex pipiens_
 
-- Author: <reeves404>
+- Author: reeves404
 - Date created: <2026-11-08>
 - Date last modified: <2026-11-08>
-- This was run at the <???> cluster of the Ohio Supercomputer Center (<https://www.osc.edu>)
-- OSC working dir: <???>
-- GitHub repository: <???>
+- This was run at the pitzer cluster of the Ohio Supercomputer Center (<https://www.osc.edu>)
+- OSC working dir: GA5
+- GitHub repository: reeves404
 
 ## Prerequisites
 
@@ -29,6 +29,7 @@
 
 ```bash
 # Downloaded on <???>
+mkdir -p data/ref
 wget -O data/ref/transcripts_rna.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/801/865/GCF_016801865.2_TS_CPP_V2/GCF_016801865.2_TS_CPP_V2_rna.fna.gz"
 ```
 
