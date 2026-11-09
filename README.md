@@ -166,21 +166,21 @@ results/salmon_quant/S86/logs/salmon_quant.log:mapping rate: 83.0532%
 ### 13: Run MultiQC
 
 *Answer*: For each program, the number of reports that MultiQC found,
-and why it found this number:
+and why it found this number: salmon 22 meta, fragment length and library format reports, one for each type of the 22 samples. Trim galore had 44 because each of the 22 had two read files and fastqc had 44 because it analyzed the trimmed r1&2 seperately for the 22
 
 ### 14: The General Statistics table
 
 *Answer*: The sample with the lowest Salmon mapping rate,
-and whether this matches your answer to question 11:
+and whether this matches your answer to question 11: S83 which does match my answer
 
 ### 15: Adapter lengths
 
 *Answer*: The most common adapter lengths, whether this surprised you,
-and why you think these lengths are the most common:
+and why you think these lengths are the most common: 1-3 mainly 1. Sort of surprising as the full length is longer. Probably trims bases that resemnle the beginning of an adapter which makes sense for most common lengths
 
 ### 16: Ask Claude about the MultiQC report
 
-*Answer*: What you asked, and what you learned from Claude's answer (in your own words):
+*Answer*: What you asked, and what you learned from Claude's answer (in your own words): i asked why 1-3 bases is the most common adapter length trimmed. It basically said theyre almost all chance matches and not real adapter contamination. Also that it doest actually matter
 
 ------------------------------------------------------------------------
 

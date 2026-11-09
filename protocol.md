@@ -66,4 +66,4 @@ done
 
 ## Step 4: Summarizing the results of all steps with MultiQC
 
-<???>
+sbatch scripts/multiqc.sh results results/multiqc
