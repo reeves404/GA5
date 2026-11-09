@@ -205,4 +205,4 @@ and whether you agree or disagree with each one, and why: 1. correct the setup c
 
 ### 20: Get a (test) DOI with Zenodo
 
-*Answer*: Your Zenodo Sandbox DOI:
+*Answer*: Your Zenodo Sandbox DOI: [![DOI](https://sandbox.zenodo.org/badge/1450833535.svg)](https://handle.test.datacite.org/10.5072/zenodo.637556) 
