@@ -29,15 +29,15 @@
 
 ```bash
 # Downloaded on <???>
-<???>
+wget -O data/ref/transcripts_rna.fna.gz "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/016/801/865/GCF_016801865.2_TS_CPP_V2/GCF_016801865.2_TS_CPP_V2_rna.fna.gz"
 ```
 
 ## Set up: Set file paths
 
 ```bash
 # Inputs:
-fastq_dir=<???>
-ref_transcripts=<???>
+fastq_dir= =../garrigos/fastq
+ref_transcripts=ref_transcripts=data/ref/transcripts_rna.fna.gz
 
 # Base output dir:
 outdir=results
@@ -45,15 +45,24 @@ outdir=results
 
 ## Step 1: Read trimming with TrimGalore
 
-<???>
+for fastq_r1 in "$fastq_dir"/*_R1.fastq.gz; do
+    fastq_r2="${fastq_r1%_R1.fastq.gz}_R2.fastq.gz"
+    sbatch scripts/trimgalore.sh "$fastq_r1" "$fastq_r2" "$outdir/trimgalore"
+done
 
 ## Step 2: Creating a transcriptome index with Salmon
 
-<???>
+sbatch scripts/salmon_index.sh "$ref_transcripts" "$outdir/salmon_index"
 
 ## Step 3: Pseudo-alignment and quantification with Salmon
 
-<???>
+for R1 in "$outdir"/trimgalore/*_R1.fastq.gz; do
+    R2="${R1%_R1.fastq.gz}_R2.fastq.gz"
+    sbatch scripts/salmon_quant.sh \
+        "$R1" "$R2" \
+        "$outdir/salmon_index" \
+        "$outdir/salmon_quant"
+done
 
 ## Step 4: Summarizing the results of all steps with MultiQC
 
